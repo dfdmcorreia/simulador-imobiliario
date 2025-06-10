@@ -433,3 +433,8 @@ def glossario():
     
     return jsonify({'glossario': termos})
 
+<!-- end list -->
+@simulador_bp.route('/bancos')
+def get_bancos():
+    bancos_nomes = [data['nome'] for data in BANCOS_DATA.values()]
+    return jsonify({'bancos': bancos_nomes})
